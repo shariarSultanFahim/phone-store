@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="" href="#" />
     <title>Phone Store</title>
     <!-- tailwind and daisyUI link -->
@@ -12,88 +12,153 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- custom css link -->
     <link rel="stylesheet" href="css/style.css" />
-</head>
+  </head>
 
-<body>
-    <header class="container mx-auto my-2 py-4 ">
-        <nav class="navbar">
-            <div class="flex-1">
-              <a class="btn btn-ghost text-xl">Phone Shop</a>
-            </div>
-            <div class="flex-none">
-              <div class="dropdown dropdown-end">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
-                  <div class="indicator">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-                    <span class="badge badge-sm indicator-item">0</span>
-                  </div>
-                </div>
-                <div tabindex="0" class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
-                  <div class="card-body">
-                    <span class="font-bold text-lg">0 Items</span>
-                    <span class="text-info">Subtotal: $0</span>
-                    <div class="card-actions">
-                      <button class="btn btn-primary btn-block">View cart</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="dropdown dropdown-end">
-                <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-                  <div class="w-10 rounded-full">
-                    <img alt="Tailwind CSS Navbar component" src="https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/324246364_3410179359308087_4889016142825892508_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9c7eae&_nc_eui2=AeFLb2xS3nipu9Z6-_Gb07kvbVw5yXIXeG5tXDnJchd4bv61A_8TCFKcoWifBLfkBHl2t_pMPNa3dQ4GF7gijHgb&_nc_ohc=dacWIB6Z9AsAX92xSq7&_nc_ht=scontent.fdac14-1.fna&oh=00_AfBElbN_QhvC7bmTgfy01EInTuJB61Wp5tqRpC3VK2oq-w&oe=65E4C7A0" />
-                  </div>
-                </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li>
-                    <a class="justify-between">
-                      Profile
-                      <span class="badge">New</span>
-                    </a>
-                  </li>
-                  <li><a>Settings</a></li>
-                  <li><a>Logout</a></li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-          <div class="carousel w-full">
-            <div id="item1" class="carousel-item w-full">
-              <video autoplay loop  src="//images.samsung.com/is/content/samsung/assets/bd/2401/home/HOME_E3_Main-KV_1440x640_pc_LTR.mp4" class="w-full" /></video>
-            </div> 
-            <div id="item2" class="carousel-item w-full">
-              <img class="w-full" src="https://www.apple.com/v/iphone-15/c/images/overview/welcome/hero_endframe__e0ajd2ayxqc2_medium.jpg"  />
-            </div> 
-          </div> 
-          <div class="flex justify-center w-full py-2 gap-2">
-            <a href="#item1" class="btn btn-xs">1</a> 
-            <a href="#item2" class="btn btn-xs">2</a> 
-          </div>
-
-        <div class="search-field flex justify-center pt-12">
-                <input id="search" type="text" placeholder="Search Your Phone" class="input input-bordered w-full max-w-xs" />
-                <button onclick="handleSearch()" id="search-btn" class="btn btn-error">Search</button>
+  <body>
+    <header class="container mx-auto my-2 py-4">
+      <nav class="navbar">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">Phone Shop</a>
         </div>
+        <div class="flex-none">
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+              <div class="indicator">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  />
+                </svg>
+                <span class="badge badge-sm indicator-item">0</span>
+              </div>
+            </div>
+            <div
+              tabindex="0"
+              class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow"
+            >
+              <div class="card-body">
+                <span class="font-bold text-lg">0 Items</span>
+                <span class="text-info">Subtotal: $0</span>
+                <div class="card-actions">
+                  <button class="btn btn-primary btn-block">View cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropdown-end">
+            <div
+              tabindex="0"
+              role="button"
+              class="btn btn-ghost btn-circle avatar"
+            >
+              <div class="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://scontent.fdac14-1.fna.fbcdn.net/v/t39.30808-6/324246364_3410179359308087_4889016142825892508_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9c7eae&_nc_eui2=AeFLb2xS3nipu9Z6-_Gb07kvbVw5yXIXeG5tXDnJchd4bv61A_8TCFKcoWifBLfkBHl2t_pMPNa3dQ4GF7gijHgb&_nc_ohc=dacWIB6Z9AsAX92xSq7&_nc_ht=scontent.fdac14-1.fna&oh=00_AfBElbN_QhvC7bmTgfy01EInTuJB61Wp5tqRpC3VK2oq-w&oe=65E4C7A0"
+                />
+              </div>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="w-full">
+        <img
+          class="w-full"
+          src="https://www.apple.com/v/iphone-15/c/images/overview/welcome/hero_endframe__e0ajd2ayxqc2_medium.jpg"
+        />
+      </div>
+
+      <div class="search-field flex justify-center pt-12">
+        <input
+          id="search"
+          type="text"
+          placeholder="Search Your Phone"
+          class="input input-bordered w-full max-w-xs"
+        />
+        <button onclick="handleSearch()" id="search-btn" class="btn btn-error">
+          Search
+        </button>
+      </div>
     </header>
     <body>
-        <div>
-            <h1 class="text-center font-bold text-3xl">Phones</h1>
-        </div>
+      <div>
+        <h1 class="text-center font-bold text-3xl">Phones</h1>
+      </div>
 
-        <!-- Phones Cards -->
-        <section id="card-container" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"> 
-            
-        </section>
+      <!-- Phones Cards -->
+      <div id="loading" class="hidden text-center my-40">
+        <span class="loading loading-spinner loading-lg"></span>
+      </div>
+
+      <!-- Featured Items -->
+      <section id="featured-phones" class="container mx-auto mt-8 carousel carousel-center rounde-box">
+        <div class="carousel-item mx-auto flex flex-col">
+          <img
+            class="h-[50vh]"
+            src="images/Samsung-Galaxy-S24-Ultra-PNG.png"
+            alt=""
+          />
+          <h1 class="text-3xl font-bold text-center">
+            Samsung Galaxy 24 Ultra
+          </h1>
+        </div>
+        <div class="hidden carousel-item mx-auto lg:flex flex-col">
+          <img
+            class="h-[50vh]"
+            src="images/Apple-Iphone-15-Pro-PNG.png"
+            alt=""
+          />
+          <h1 class="text-3xl font-bold text-center">Apple Iphone 15 Pro</h1>
+        </div>
+        
+        <div class="hidden carousel-item mx-auto lg:flex flex-col">
+          <img class="h-[50vh]" src="images/Google-Products-PNG.png" alt="" />
+          <h1 class="text-3xl font-bold text-center">Google Pixel 8 Pro</h1>
+        </div>
+      </section>
+
+      <section id="card-container" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
+      ></section>
+
+      <div class="flex justify-center mt-8">
+        <button onclick="showAll()" id="showall-btn" class="hidden btn btn-primary text-center">
+          Show All
+        </button>
+      </div>
     </body>
 
-
-<script src="script/script.js"></script>
-</body>
+    <script src="script/script.js"></script>
+  </body>
 </html>
